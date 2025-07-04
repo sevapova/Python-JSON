@@ -9,6 +9,6 @@ students.sort(key=lambda s: int(s["score"]), reverse=True)
 for i, student in enumerate(students, start=1):
     student["rank"] = i
 
-with open("rating.json", "w", encoding="utf-8") as f:
+with open("rating.json", "w") as f:
     json.dump(students, f, ensure_ascii=False, indent=4)
 
